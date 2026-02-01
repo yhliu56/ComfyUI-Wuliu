@@ -177,6 +177,7 @@ class TranscribeSrt:
             while start < time_stamps_len:
                 i = s.find(time_stamps[start][2])
                 if i < 0:
+                    start -= 1
                     break
                 s = s[i+1:]
                 start += 1
@@ -184,6 +185,7 @@ class TranscribeSrt:
                 start -= 1
             end_time = time_stamps[start][1]
             res.append(text_to_srt(idx + 1, sent, start_time, end_time))
+            start += 1
 
         res = "\n".join(res) + "\n"
         return (res, )
