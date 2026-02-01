@@ -1,0 +1,191 @@
+{
+  "id": "00000000-0000-0000-0000-000000000000",
+  "revision": 0,
+  "last_node_id": 4,
+  "last_link_id": 4,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "TranscribeSrt",
+      "pos": [
+        614.6697731204199,
+        257.18788997714455
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "transcribe",
+          "type": "STRING",
+          "widget": {
+            "name": "transcribe"
+          },
+          "link": 1
+        },
+        {
+          "name": "text",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "srt",
+          "type": "STRING",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TranscribeSrt"
+      },
+      "widgets_values": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 3,
+      "type": "PreviewAny",
+      "pos": [
+        938.3567852606659,
+        257.5901434051008
+      ],
+      "size": [
+        361.29039290771493,
+        325.0988964538575
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 2
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 2,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        11.389125307269321,
+        218.2700451615009
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "        0.00-0.16: 真\n        1.44-1.52: 的\n        1.52-1.60: 美\n        1.60-1.76: 千\n        2.00-2.08: 红\n        2.16-2.24: 百\n        2.48-2.48: 媚\n        2.64-2.72: 偏\n        2.72-2.72: 偏\n        3.36-3.44: 只\n        3.52-3.52: 为\n        3.52-3.52: 你\n        3.52-3.52: 而\n        4.96-4.96: 醉"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        18.002470949359164,
+        495.11673644568066
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "真的美，千红百媚，偏偏只为你而醉。"
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      0,
+      1,
+      0,
+      "STRING"
+    ],
+    [
+      2,
+      1,
+      0,
+      3,
+      0,
+      "STRING"
+    ],
+    [
+      4,
+      4,
+      0,
+      1,
+      1,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8264462809917354,
+      "offset": [
+        124.08505662178078,
+        -29.833390402474777
+      ]
+    },
+    "workflowRendererVersion": "LG",
+    "frontendVersion": "1.37.5"
+  },
+  "version": 0.4
+}

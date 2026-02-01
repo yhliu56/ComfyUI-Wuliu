@@ -139,6 +139,9 @@ class TranscribeSrt:
             "required": {
                 "transcribe": ("STRING",),
             },
+            "optional": {
+                "text": ("STRING", {"default": None}),
+            }
         }
 
     RETURN_TYPES = ("STRING", )
@@ -157,12 +160,12 @@ class TranscribeSrt:
             start = match[0]
             end = match[1]
             s = match[2]
-            if text is None:
+            if text is None or len(text) == 0:
                 res.append(text_to_srt(i + 1, s, float(start), float(end)))
             else:
                 res.append((float(start), float(end), s))
 
-        if text is None:
+        if text is None or len(text) == 0:
             res = "\n".join(res) + "\n"
             return (res, )
         
@@ -198,6 +201,8 @@ if __name__ == '__main__':
         (1.2, 2.34) 你放肆
         (2.34, 4.8) 小小人仙竟然敢妄言我西方教教义
     '''
+    print(srt.transcribe_to_srt(text))
+
     text = '''
         1.2-2.34: 你放肆
         2.34-4.8: 小小人仙竟然敢妄言我西方教教义
