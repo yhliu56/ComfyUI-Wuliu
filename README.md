@@ -13,7 +13,7 @@ Search for "Wuliu" in ComfyUI Manager
 ### Manual Installation
 ```bash
 cd ComfyUI/custom_nodes
-git clone https://github.com/DarioFT/ComfyUI-Qwen3-ASR.git
+git clone https://github.com/yhliu56/ComfyUI-Wuliu.git
 cd ComfyUI-Wuliu
 pip install -r requirements.txt
 ```
