@@ -5,56 +5,6 @@
   "last_link_id": 4,
   "nodes": [
     {
-      "id": 1,
-      "type": "TranscribeSrt",
-      "pos": [
-        614.6697731204199,
-        257.18788997714455
-      ],
-      "size": [
-        270,
-        82
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "transcribe",
-          "type": "STRING",
-          "widget": {
-            "name": "transcribe"
-          },
-          "link": 1
-        },
-        {
-          "name": "text",
-          "shape": 7,
-          "type": "STRING",
-          "widget": {
-            "name": "text"
-          },
-          "link": 4
-        }
-      ],
-      "outputs": [
-        {
-          "name": "srt",
-          "type": "STRING",
-          "links": [
-            2
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "TranscribeSrt"
-      },
-      "widgets_values": [
-        "",
-        ""
-      ]
-    },
-    {
       "id": 3,
       "type": "PreviewAny",
       "pos": [
@@ -146,6 +96,57 @@
       "widgets_values": [
         "真的美，千红百媚，偏偏只为你而醉。"
       ]
+    },
+    {
+      "id": 1,
+      "type": "TranscribeSrt",
+      "pos": [
+        614.6697731204199,
+        257.18788997714455
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "transcribe",
+          "type": "STRING",
+          "widget": {
+            "name": "transcribe"
+          },
+          "link": 1
+        },
+        {
+          "name": "text",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "srt",
+          "type": "STRING",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TranscribeSrt"
+      },
+      "widgets_values": [
+        "",
+        128,
+        ""
+      ]
     }
   ],
   "links": [
@@ -178,10 +179,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.8264462809917354,
+      "scale": 0.7513148009015777,
       "offset": [
-        124.08505662178078,
-        -29.833390402474777
+        361.30165699686927,
+        -24.24531057126482
       ]
     },
     "workflowRendererVersion": "LG",

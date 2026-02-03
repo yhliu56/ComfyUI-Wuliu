@@ -138,6 +138,7 @@ class TranscribeSrt:
         return {
             "required": {
                 "transcribe": ("STRING",),
+                "max_sentence_len": ("INT", {"default": 128, "min": 1, "max": 1000, "tooltip": "最大句子长度"}),
             },
             "optional": {
                 "text": ("STRING", {"default": None}),
@@ -149,7 +150,7 @@ class TranscribeSrt:
     FUNCTION = "transcribe_to_srt"
     CATEGORY = "Wuliu-Srt"
 
-    def transcribe_to_srt(self, transcribe, text=None):
+    def transcribe_to_srt(self, transcribe, max_sentence_len=128, text=None):
         lines = [line.strip() for line in transcribe.split('\n') if line.strip()]
         pattern = r'([0-9]+[.0-9]*)[^0-9]*([0-9]+[.0-9]*)[ )）:：]+([^ )）:：]+.*)'
 
@@ -169,7 +170,7 @@ class TranscribeSrt:
             res = "\n".join(res) + "\n"
             return (res, )
         
-        sentences = split_sentences(text, max_sent_len=128)
+        sentences = split_sentences(text, max_sent_len=max_sentence_len)
         time_stamps = res
         start = 0
         time_stamps_len = len(time_stamps)
